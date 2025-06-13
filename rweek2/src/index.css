@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+body {
+  font-family: 'Satisfy', cursive;
+  background: #ede187;
+  padding: 2rem;
+}
+
+.App {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  background: #676666;
+  padding: 2rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #fff8d0;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Input Field */
+.input-section input {
+  font-family: 'Satisfy', cursive;
+  padding: 0.5rem 1rem;
+  border: 2px solid #ede187;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  width: 70%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #fffce1;
+  color: #333;
+}
+
+.input-section input:focus {
+  border-color: #d6c850;
+  box-shadow: 0 0 5px #ede187;
+}
+
+/* Buttons */
+.input-section button,
+.filter-section button {
+  font-family: 'Satisfy', cursive;
+  background-color: #ede187;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #333;
+}
+
+.input-section button:hover,
+.filter-section button:hover {
+  background-color: #d6c850;
+  color: #fff;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4ecb1;
+  color: #333;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+  font-family: 'Satisfy', cursive;
+  color: #333;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #ede187;
+  border-radius: 4px;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #d6c850;
+  border-color: #d6c850;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
