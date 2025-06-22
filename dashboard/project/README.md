@@ -27,7 +27,7 @@ A modern and customizable calendar dashboard built with **React**, **TypeScript*
 
 ## 📁 Folder Structure
 
-project-root/
+project/
 ├── public/
 │ └── index.html
 ├── src/
@@ -47,6 +47,7 @@ project-root/
 
 ### 1. Clone the repository
 git clone https://github.com/Deepika307/react-celebal.git
+
 cd react-celebal/dashboard/project
 ### 2. Install dependencies
 npm install
